@@ -1,0 +1,324 @@
+.builders-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.builders-header-container {
+    display: flex;
+    justify-content: space-between; /* <-- isso aqui faz o truque */
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.add-builder-button {
+    background-color: #A85FD9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.builder-header-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+  }
+
+.add-builder-button:hover {
+    background-color: #8c4bb8;
+}
+
+.builders-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.builder-card {
+    position: relative;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.builder-card-header h3{
+    font-size: 20px;
+}
+
+.builder-card:hover {
+    background-color: #f1f1f1;
+}
+
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+}
+
+/* Estilização para quando o card estiver expandido */
+.builder-card.expanded {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+/* Detalhes dentro do card expandido */
+.builder-details {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Botões dentro do card */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd; /* Linha separadora */
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Botão "Fechar" no canto inferior esquerdo */
+.close-details {
+    background-color: #ccc;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.close-details:hover {
+    background-color: #bbb;
+}
+
+/* Botão "Deletar" no canto inferior direito */
+.delete-button {
+    background-color: #A85FD9;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #8c4bb8;
+}
+
+
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        max-width: 90%;
+    }
+
+    .builder-details {
+        font-size: 14px;
+    }
+
+    .close-details,
+    .delete-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+.save-button {
+    background-color: #A85FD9;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #8c4bb8;
+}
+
+.form-group.support-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.support-group select {
+    background-color: #A85FD9;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 120px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.support-group select:hover {
+    background-color: #8c4bb8;
+}
+
+.support-group select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(168, 95, 217, 0.5);
+}
+
+.builder-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.switch {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.switch.active {
+    background-color: #4caf50;
+}
+
+.switch-handle {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.switch.active .switch-handle {
+    transform: translateX(20px);
+}
+
+.builder-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.builder-card-header h3 {
+    margin: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+}
+
+.filter-buttons{
+    display: flex;
+
+}
+
+.filter-buttons button{
+    background-color: #A85FD9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.status-button{
+    margin-left: 10px;
+}
+
+.dropdown-container {
+    
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 60px; /* ou ajuste conforme o botão */
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 130px;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .dropdown-menu button:hover {
+    background-color: #f0f0f0;
+  }
