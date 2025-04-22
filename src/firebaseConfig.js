@@ -3,14 +3,14 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth"; 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBTm0f_zOR_88GBmkEIxHoP-FRLPFdIjCw",
-    authDomain: "dropsmartz.firebaseapp.com",
-    projectId: "dropsmartz",
-    storageBucket: "dropsmartz.firebasestorage.app",
-    messagingSenderId: "460151237587",
-    appId: "1:460151237587:web:7b0d6bbe43463c88a21d26",
-    measurementId: "G-BSWP04PZC0"
-  };
+  apiKey: "AIzaSyBz0G_omI9u0JxKduWLgH_tU561wSWLmrA",
+  authDomain: "opendashzd.firebaseapp.com",
+  projectId: "opendashzd",
+  storageBucket: "opendashzd.firebasestorage.app",
+  messagingSenderId: "704091005312",
+  appId: "1:704091005312:web:1efad9ae744f5fd9096165",
+  measurementId: "G-DMDQBFGM5G"
+};
   
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
