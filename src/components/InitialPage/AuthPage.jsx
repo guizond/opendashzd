@@ -11,7 +11,7 @@ const AuthPage = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-      document.title = "OpenDashZ";
+      document.title = "OpenDashZD";
     })
 
   const handleLogin = async (e) => {
